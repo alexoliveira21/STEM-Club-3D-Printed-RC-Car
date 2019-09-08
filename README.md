@@ -44,21 +44,40 @@ Our goal was to create a 3D printed RC car which we would then train to be auton
   - Scroll to interface options and enable Camera, SSH, I2C
   
 ### Required libraries for this project:
-  - Numpy
+  - **_Numpy:_**
     ```
     sudo apt install libatlas-base-dev
-    pip install numpy
+    sudo pip install numpy
     ```
-  - Pandas
+  - **_Pandas:_**
     ```
     sudo apt-get install python-pandas
     ```
-  - Tensorflow (AI)
-  - Keras (AI)
-  - Flask and flask-cors (Web-server)
-  - picamera
-  - Servo and PCA9685 (included in Sunfounder_PCA9685 folder) 
-  - OPENCV (Process to download below)
+  - **_Tensorflow (AI):_**
+    ```
+    sudo pip3 install tensorflow
+    ```
+  - **_H5PY (AI model):_**
+    ```
+    sudo apt-get install libhdf5-serial-dev
+    sudo pip install h5py
+    ```
+  - **_Keras (AI):_**
+    ```
+    sudo pip install pillow
+    sudo pip install keras
+    ```
+  - **_Flask and Flask-Cors (Web Server):_**
+    ```
+    sudo pip install flask
+    sudo  pip install -U flask-cors
+    ```
+  - **_Picamera:_**
+    ```
+    sudo apt-get install python-picamera python3-picamera
+    ```
+  - **_Servo and PCA9685_** (included in Sunfounder_PCA9685 folder) 
+  - **_OPENCV_** (Process to download below)
   
 ## Installing OPENCV:
 
