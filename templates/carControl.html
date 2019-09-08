@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=1000, user-scalable=no"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../static/carInfo.js"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <h1>Car Controller</h1>
+    <br>
+    <br>
+
+    <div class="slidecontainer">
+
+      <label for="speed" style="font-size: 50px">Speed:</label>
+
+      <div id="outer">
+        <div class="inner"><button id="decreaseSpeed" type="button" class="block" value="90">Decrease by 2</button></div>
+        <div class="inner"><button id="stopButton" type="button" class="block">STOP</button></div>
+        <div class="inner"><button id="increaseSpeed" type="button" class="block" value="90">Increase by 2</button></div>
+      </div>
+      <!--<input id="speed" type="range" min="30" max="150" value="90" class="slider"-->
+
+      <p>Speed: <span id="speedValue"></span></p>
+      <br>
+      <br>
+
+      <button id="recordButton" type="button" class="block" name="recordButton">Record Video</button>
+      <p><span id="recordingValue"></span></p>
+      <br>
+      <br>
+
+      <label for="steering" style="font-size: 50px">Steering:</label>
+      <input id="steering" type="range" min="50" max="150" value="100" class="slider">
+      <p>Steering: <span id="steeringValue"></span></p>
+    </div>
+
+    <style>
+
+    {
+      width:100%;
+      text-align: center;
+    }
+    .inner
+    {
+      display: inline-block;
+    }
+
+      .slidecontainer {
+        width: 100%; /* Width of the outside container */
+}
+
+    /* The slider itself */
+      .slider {
+        -webkit-appearance: none;  /* Override default CSS styles */
+        appearance: none;
+        width: 100%; /* Full-width */
+        height: 150px; /* Specified height */
+        background: green; /* Grey background */
+        outline: none; /* Remove outline */
+        opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+        -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+        transition: opacity .2s;
+    }
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        width: 50px; /* Set a specific slider handle width */
+        height: 150px; /* Slider handle height */
+        background: black; /* Green background */
+        cursor: pointer; /* Cursor on hover */
+      }
+    </style>
+
+    <style>
+
+      .block {
+        display: block;
+        width: 300px;
+        height: 150px;
+        border: none;
+        background-color: blue;
+        padding: 30px 50px;
+        font-size: 30px;
+        cursor: pointer;
+        text-align: center;
+        color: white;
+        }
+    </style>
+
+  </body>
+</html>
