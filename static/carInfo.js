@@ -16,12 +16,9 @@ $(document).ready(function(){
   steeringSlider.value = "100";
 
   stopButton.onclick = function(){
-    if (recordingOutput.innerHTML == "Not Recording" || recordingOutput.innerHTML == "Stopped Recording"){
-      recordingOutput.innerHTML = "Currently Recording";
-    }
-    else {
-      recordingOutput.innerHTML = "Stopped Recording";
-    }
+
+    recordingOutput.innerHTML = "Stopped Recording";
+
     increaseSpeed.value = "90";
     decreaseSpeed.value = "90";
     steeringSlider.value = "100";
