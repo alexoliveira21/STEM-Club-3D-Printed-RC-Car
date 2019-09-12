@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-  //var speedSlider = document.getElementById("speed");
   var speedOutput = document.getElementById("speedValue");
   var steeringSlider = document.getElementById("steering");
   var steeringOutput = document.getElementById("steeringValue");
@@ -22,10 +21,11 @@ $(document).ready(function(){
     increaseSpeed.value = "90";
     decreaseSpeed.value = "90";
     steeringSlider.value = "100";
+
+    push_data(increaseSpeed.value, steeringSlider.value, "/stop");
+    
     speedOutput.innerHTML = increaseSpeed.value;
     steeringOutput.innerHTML = steeringValue.value;
-    push_data(increaseSpeed.value, steeringSlider.value, "/stop");
-
   };
 
   recordButton.onclick = function(){
@@ -34,10 +34,6 @@ $(document).ready(function(){
     if (recordingOutput.innerHTML == "Not Recording" || recordingOutput.innerHTML == "Stopped Recording"){
       recordingOutput.innerHTML = "Currently Recording";
     }
-    else {
-      recordingOutput.innerHTML = "Stopped Recording";
-    }
-
   }
 
   increaseSpeed.onclick = function(){
@@ -57,11 +53,6 @@ $(document).ready(function(){
     push_data(increaseSpeed.value, steeringSlider.value, "/change_speed");
 
   };
-
-  /*speedSlider.oninput = function() {
-    speedOutput.innerHTML = this.value;
-    push_data(increaseSpeed.value, steeringSlider.value, "/data_update");
-  };*/
 
   steeringSlider.oninput = function() {
 
